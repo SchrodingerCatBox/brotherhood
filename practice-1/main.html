@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Task</title>
+  <link rel="stylesheet" href="/practice-1/modal.css">
+  <link rel="icon" href="/practice-1/assets/website.png">
+</head>
+
+<body>
+  <button id="modalOpen" class="button button--position form__button">Open Modal</button>
+  <div id="modal" class="modal">
+    <div class="modal__inner">
+      <h1 class="modal__header">Стать партнёром проекта</h1>
+      <form id="modalForm">
+        <div class="modal__logo-wrapper">
+          <div class="logo--upload-wrapper">
+            <div class="form__group form__group--logo">
+              <p class="form__description">✱<span class="form__description--color">Логотип (jpeg, png)</span></p>
+              <label for="logo" class="logo--background">
+                <p id="file-label" class="form__logo--text"><img src="/practice-1/assets/logo-svg.svg"
+                    class="form__logo--svg" alt="logo">Выберите<br>файл</p>
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="svg--position">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M15.2983 2.65842C15.7545 2.20342 15.7545 1.46375 15.2983 1.00875C14.8433 0.552584 14.1048 0.552584 13.6486 1.00875L7.90398 6.75342L2.15814 1.00875C1.70314 0.552584 0.963476 0.552584 0.508476 1.00875C0.0523096 1.46375 0.0523096 2.20342 0.508476 2.65842L6.25314 8.40425L0.508476 14.1489C0.0523096 14.6051 0.0523096 15.3436 0.508476 15.7986C0.963476 16.2548 1.70314 16.2548 2.15814 15.7986L7.90398 10.0539L13.6486 15.7986C14.1048 16.2548 14.8433 16.2548 15.2983 15.7986C15.7545 15.3436 15.7545 14.6051 15.2983 14.1489L9.55364 8.40425L15.2983 2.65842Z"
+                    fill="#6A6E72" />
+                </svg>
+              </label>
+              <input type="file" id="logo" name="logo" class="logo--hidden"
+                onchange="document.getElementById('file-label').textContent = this.files[0].name"
+                accept="image/jpeg, image/png" required>
+            </div>
+          </div>
+          <div class="modal__forms-wrapper">
+            <div class="form__group form__group--height-and-width">
+              <label for="organisation">
+                <p class="form__description">✱<span class="form__description--color"> Название организации</span></p>
+              </label>
+              <input type="text" id="organisation" name="organisation" placeholder="ООО Bleep Bloop" class="form__text"
+                required>
+            </div>
+            <div class="form__group form__group--height-and-width">
+              <label for="phone">
+                <p class="form__description">✱<span class="form__description--color"> Телефон</span></p>
+              </label>
+              <input type="tel" id="phone" name="phone" placeholder="+7 000 000-00-00" class="form__text" required>
+            </div>
+            <div class="form__group form__group--height-and-width">
+              <label for="email">
+                <p class="form__description">✱<span class="form__description--color"> E-mail</span></p>
+              </label>
+              <input type="email" id="email" name="email" placeholder="woof@awoo.rawr" class="form__text" required>
+            </div>
+          </div>
+        </div>
+        <div class="form__group form__group--height-and-width">
+          <label for="direction">
+            <p class="form__description">✱<span class="form__description form__description--color"> Направление</span>
+            </p>
+          </label>
+          <input type="text" id="direction" name="direction" placeholder="Экология" class="form__text" required>
+          <img src="/practice-1/assets/arrow.svg" alt="arrow" class="form__icon">
+        </div>
+        <div class="form__group form__group--height-and-width">
+          <input type="text" id="website" name="website" placeholder="Website" class="form__text">
+          <img src="/practice-1/assets/global.svg" alt="website" class="form__icon">
+        </div>
+        <div class="form__group form__group--height-and-width">
+          <input type="text" id="vk" name="vk" placeholder="Vkontakte" class="form__text">
+          <img src="/practice-1/assets/vk.svg" alt="vk" class="form__icon">
+        </div>
+        <div class="form__group form__group--height-and-width">
+          <input type="text" id="odnoklassniki" name="odnoklassniki" placeholder="Odnoklassniki" class="form__text">
+          <img src="/practice-1/assets/odnoklassniki.svg" alt="odnoklassniki" class="form__icon">
+        </div>
+        <div class="form__group form__group--height-and-width">
+          <input type="text" id="facebook" name="facebook" placeholder="Facebook" class="form__text">
+          <img src="/practice-1/assets/facebook.svg" alt="facebook" class="form__icon">
+        </div>
+        <div class="form__group form__group--height-and-width">
+          <input type="text" id="instagram.svg" name="instagram.svg" placeholder="Instagram" class="form__text">
+          <img src="/practice-1/assets/instagram.svg" alt="instagram.svg" class="form__icon">
+        </div>
+        <div class="form__group form__group--height-and-width">
+          <input type="text" id="youtube" name="youtube" placeholder="YouTube" class="form__text">
+          <img src="/practice-1/assets/youtube.svg" alt="youtube" class="form__icon">
+        </div>
+        <div class="form__group">
+          <label for="supervisor">
+            <p class="form__description form__description--color">Руководитель</p>
+          </label>
+          <input type="text" id="supervisor" name="supervisor" placeholder="Иванов Иван Иванович" class="form__text">
+        </div>
+        <div class="form__group--footer">
+          <button class="button button--width form__button">Стать партнёром проекта</button>
+          <span class="cancel">Отменить</span>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="/practice-1/modal.js"></script>
+</body>
+
+</html>
