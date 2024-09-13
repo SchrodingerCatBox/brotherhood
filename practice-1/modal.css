@@ -40,7 +40,7 @@ body {
 }
 
 .logo--background {
-  background-image: url("/practice-1/assets/Logo.png");
+  background-image: url("./assets/Logo.png");
   align-items: center;
   justify-content: center;
   display: flex;
